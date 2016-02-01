@@ -2,6 +2,7 @@
 
 // Declare app level module which depends on views, and components
 angular.module('chefSocial', [
+  'ui.bootstrap',
   'ngRoute',
   'chefSocial.view1',
   'chefSocial.view2',
