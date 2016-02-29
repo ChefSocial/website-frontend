@@ -12,14 +12,16 @@
 
   	var staticRoutes = [
 	    '^\/css',
-	    '^\/js',
+	    '^\/components',
 	    '^\/modules',
 	    '^\/vendor',
 	    '^\/index\\.html',
-	    '^\/templates',
+	    '^\/images',
 		'^\/views',
 	    '^\/images',
-	    '^\/fonts'
+	    '^\/fonts',
+	    '^\/app\\.css',
+	    '^\/main\\.js'
 	  ];
 
 	// router.get('/', function (req, res) {

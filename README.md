@@ -72,7 +72,7 @@ this server is:
 npm start
 ```
 
-Now browse to the app at `http://localhost:8000/app/index.html`.
+Now browse to the app at `http://localhost:3003/app/index.html`.
 
 
 
@@ -295,3 +295,8 @@ For more information on AngularJS please check out http://angularjs.org/
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
+
+-- whatever is there in bower.json get installed/downloaded in venfor folder...the location is given in bowercc
+-- make sure vendor folder is web accessible in production server
+-- bower install ui-router --save to install in vendor folder and add an entry in bower.json file, Also add entry for --> <script src="vendor/ui-router/release/angular-ui-router.js"></script>
+-- 
