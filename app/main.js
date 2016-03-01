@@ -15,7 +15,7 @@
 	  $stateProvider
 	  	.state('app', {
 	  		views: {
-	  			'content@': {
+	  			'content': {
 	  				templateUrl: 'views/chefSocialApp.html'
 	  			}
 	  		},
@@ -25,7 +25,8 @@
 	  		url: '/login',
 	  		views: {
 	  			'module': {
-	  				templateUrl: 'modules/login/login.html'
+	  				templateUrl: 'modules/login/login.html',
+	  				controller: 'login'
 	  			}
 	  		}
 	  	});

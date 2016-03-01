@@ -298,5 +298,5 @@ For more information on AngularJS please check out http://angularjs.org/
 
 -- whatever is there in bower.json get installed/downloaded in venfor folder...the location is given in bowercc
 -- make sure vendor folder is web accessible in production server
--- bower install ui-router --save to install in vendor folder and add an entry in bower.json file, Also add entry for --> <script src="vendor/ui-router/release/angular-ui-router.js"></script>
+-- bower install ui-router --save to install in vendor folder and add an entry in bower.json file, Also add entry for --> <script src="vendor/ui-router/release/angular-ui-router.js"></script> and pass the module name in the arguments for angular.module('chefSocial', ['module_name'])
 -- 

@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="chefSocial" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="chefSocial" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="chefSocial" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="chefSocial" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" ng-app="chefSocial" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +13,19 @@
   <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" type="text/css" href="vendor/angular-bootstrap/ui-bootstrap-csp.css">
   <script src="vendor/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head> 
 <body>
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
-  <div ui-view="content"></div>
+  <div class="container-fluid">
+    <div class="app-header"></div>
+    <div ui-view="content"></div>
+    <div class="app-footer"></div>
+  </div>
+  
 
   <!-- <div>Angular seed app: v<span app-version></span></div> -->
 
@@ -31,6 +37,8 @@
   <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="vendor/ui-router/release/angular-ui-router.js"></script>
   <script src="main.js"></script>
+  <script src="modules/login/login.js"></script>
+  <script src="modules/login/loginService.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
