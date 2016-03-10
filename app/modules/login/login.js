@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('chefSocial')
-		.controller('login', ['$scope', 'UserService', '$state', function ($scope, UserService, $state){
+		.controller('login', ['$scope', 'UserService', '$state', '$localStorage', function ($scope, UserService, $state, $localStorage){
 
 			$scope.login = function (){
 				UserService.login()
@@ -14,7 +14,6 @@
 							// Show an alert of successful login
 							// transition to the dashboard state
 							$state.go('app.dashboard');
-							// console.log(UserService);
 						},
 						function(){
 							console.log('Something went wrong.');

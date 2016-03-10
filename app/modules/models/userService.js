@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular.module('chefSocial')
-		.service('UserService', ['$http', '$q', function ($http, $q){
+		.service('UserService', ['$http', '$q', '$localStorage', function ($http, $q, $localStorage){
 			
 			var self = this;
 			this.login = function (){
@@ -40,7 +40,8 @@
 			}
 
 			var captureUserCredentials = function(self, data){
-				self.credentials = {
+				$localStorage.logged_in_user = $localStorage.logged_in_user || {};
+				$localStorage.logged_in_user.credentials = {
 					'access-token': data()['access-token'],
 					'client': data()['client'],
 					'uid': data()['uid']
