@@ -9,6 +9,7 @@
 					.then(
 						function(data){
 							$scope.loggedInUserData = data;
+							console.log("Successfully logged in with user data as below:");
 							console.log(data);
 						},
 						function(){

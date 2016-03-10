@@ -5,8 +5,6 @@
 	angular.module('chefSocial', [
 	  'ui.bootstrap',
 	  'ngRoute',
-	  'chefSocial.view1',
-	  'chefSocial.view2',
 	  'ui.router'
 	]).
 	config(['$routeProvider', '$stateProvider', function ($routeProvider, $stateProvider) {
