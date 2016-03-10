@@ -2,16 +2,16 @@
 	'use strict';
 
 	angular.module('chefSocial')
-		.controller('login', ['$scope', 'UserService', '$state', function ($scope, UserService, $state){
+		.controller('logout', ['$rootScope', '$scope', 'UserService', function ($rootScope, $scope, UserService){
 
-			$scope.login = function (){
-				UserService.login()
+			$scope.logout = function (){
+				UserService.logout(UserService.credentials)
 					.then(
 						function(data){
 							$scope.loggedInUserData = data;
 							console.log("Successfully logged in with user data as below:");
 							console.log(data);
-							// Show an alert of successful login
+							// Show an alert of successful logout
 							// transition to the dashboard state
 							$state.go('app.dashboard');
 							// console.log(UserService);
@@ -23,6 +23,5 @@
 						}
 					);
 			}
-
 		}]);
 })(window.angular);

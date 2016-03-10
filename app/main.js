@@ -5,7 +5,8 @@
 	angular.module('chefSocial', [
 	  'ui.bootstrap',
 	  'ngRoute',
-	  'ui.router'
+	  'ui.router',
+	  'ngStorage'
 	]).
 	config(['$routeProvider', '$stateProvider', function ($routeProvider, $stateProvider) {
 	  
@@ -25,6 +26,24 @@
 	  			'module': {
 	  				templateUrl: 'modules/login/login.html',
 	  				controller: 'login'
+	  			}
+	  		}
+	  	})
+	  	.state('app.logout', {
+	  		url: '/logout',
+	  		views: {
+	  			'module': {
+	  				templateUrl: 'modules/logout/logout.html',
+	  				controller: 'logout'
+	  			}
+	  		}
+	  	})
+	  	.state('app.dashboard', {
+	  		url: '/dashboard',
+	  		views: {
+	  			'module': {
+	  				templateUrl: 'modules/dashboard/dashboard.html',
+	  				controller: 'dashboard'
 	  			}
 	  		}
 	  	});
