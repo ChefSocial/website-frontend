@@ -5,7 +5,6 @@
 	.controller('dashboard', ['$scope', 'UserService', '$localStorage', '$state', function ($scope, UserService, $localStorage, $state){
 
 		$scope.logout = function (){
-				console.log($localStorage);
 				UserService.logout($localStorage.logged_in_user.credentials)
 					.then(
 						function(data){

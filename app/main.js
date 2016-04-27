@@ -9,8 +9,6 @@
 	  'ngStorage'
 	]).
 	config(['$routeProvider', '$stateProvider', function ($routeProvider, $stateProvider) {
-	  
-	  $routeProvider.otherwise({redirectTo: '/login'});
 	  $stateProvider
 	  	.state('app', {
 	  		views: {
@@ -47,5 +45,12 @@
 	  			}
 	  		}
 	  	});
+	  	$routeProvider.otherwise({redirectTo: '/login'});
+
 	}]);
 })(window.angular);
+
+// ======================== NOTES ========================
+
+// An abstract state will never be directly activated, but can provide inherited properties to its 
+// common children states.

@@ -25,11 +25,20 @@
 
 			this.logout = function (data){
 				var defer = $q.defer();
-				var data = {
-					'email': 'rox.rachit@gmail.com',
-					'password': 'password'
-				}
-				$http.post('http://localhost:3000/auth/sign_in', data)
+				console.log("data posted to delete user is below...");
+				console.log(data);
+				// $http.delete('http://localhost:3000/auth/sign_out', data)
+				// .success(function (data){
+				// 	defer.resolve(data);
+				// })
+				// .error(function (data){
+				// 	defer.reject(data);
+				// });
+				$http({
+					method: 'DELETE',
+					url: 'http://localhost:3000/auth/sign_out',
+					headers: data
+				})
 				.success(function (data){
 					defer.resolve(data);
 				})
@@ -46,6 +55,8 @@
 					'client': data()['client'],
 					'uid': data()['uid']
 				}
+				console.log("logged_in_user.credentials which are stored are below...");
+				console.log($localStorage.logged_in_user.credentials);
 			}
 
 		}]);
