@@ -1,34 +1,47 @@
-/* app css stylesheet */
+/* ==================== VARIABLES ==================== */
+/* ==================== VARIABLES <--END--> ==================== */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important; }
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
+.center {
+  text-align: center; }
 
-.menu:before {
-  content: "[";
-}
+.csButton {
+  background-color: #EC6862;
+  border-radius: 0 !important;
+  border-color: #EC6862 !important;
+  padding: 1rem 4rem !important;
+  font-size: 1.5rem !important;
+  color: white; }
+  .csButton:hover, .csButton:active, .csButton:target, .csButton:focus {
+    background-color: #EC6862;
+    border-color: #EC6862;
+    color: white !important;
+    outline: 0 !important; }
 
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-.mainContentWrapper{
+.loginWrapper {
   /*height: 100vh;*/
-}
+  /*background-color: red;*/
+  padding: 10rem; }
+  .loginWrapper img {
+    height: 40rem; }
+  .loginWrapper input {
+    width: 70%;
+    height: 4rem;
+    margin-bottom: 2rem;
+    border-radius: 0; }
+  .loginWrapper label {
+    font-weight: 200; }
+
+.csAlertWrapper {
+  position: absolute;
+  width: 40%;
+  z-index: 99999999999;
+  left: 0;
+  opacity: .96;
+  right: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  top: 5rem;
+  display: flex;
+  align-items: center; }

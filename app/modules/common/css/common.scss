@@ -1,0 +1,25 @@
+/* ==================== VARIABLES ==================== */
+$cs_red: #EC6862;
+/* ==================== VARIABLES <--END--> ==================== */
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.center{
+	text-align: center;
+}
+.csButton{
+	background-color: $cs_red;
+	border-radius: 0!important;
+	border-color: $cs_red!important;
+	padding: 1rem 4rem!important;
+	font-size: 1.5rem!important;
+	color: white;
+	&:hover, &:active, &:target, &:focus{
+		background-color: $cs_red;
+		border-color: $cs_red;
+		color: white!important;
+		outline: 0!important;
+	}
+}
