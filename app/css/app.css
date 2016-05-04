@@ -33,6 +33,20 @@ input:-webkit-autofill {
   .loginWrapper label {
     font-weight: 200; }
 
+.signUpWrapper {
+  /*height: 100vh;*/
+  /*background-color: red;*/
+  padding: 10rem; }
+  .signUpWrapper img {
+    height: 40rem; }
+  .signUpWrapper input {
+    width: 70%;
+    height: 4rem;
+    margin-bottom: 2rem;
+    border-radius: 0; }
+  .signUpWrapper label {
+    font-weight: 200; }
+
 .csAlertWrapper {
   position: absolute;
   width: 40%;
