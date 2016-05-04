@@ -2,23 +2,22 @@
 	'use strict';
 
 	angular.module('chefSocial')
-		.controller('login', ['$scope', 'UserService', '$state', '$localStorage', function ($scope, UserService, $state, $localStorage){
+		.controller('login', ['$rootScope', '$scope', 'UserService', '$state', '$localStorage', function ($rootScope, $scope, UserService, $state, $localStorage){
 
 			$scope.login = function (){
-				UserService.login()
+				var data = {
+					'email': $scope.user.email,
+					'password': $scope.user.password
+				};
+				UserService.login(data)
 					.then(
 						function(data){
 							$scope.loggedInUserData = data;
-							console.log("Successfully logged in with user data as below:");
-							console.log(data);
-							// Show an alert of successful login
-							// transition to the dashboard state
 							$state.go('app.dashboard');
+							$rootScope.$emit('showAlert', {'status':'success', 'message':'Welcome to ChefSocial ' + data.data.email});
 						},
-						function(){
-							console.log('Something went wrong.');
-							// Show an alert that credentials were wrong
-							// Stay at the same state
+						function(data){
+							$rootScope.$emit('showAlert', {'status':'danger', 'message':data.errors[0]});
 						}
 					);
 			}

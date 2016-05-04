@@ -1,0 +1,13 @@
+.csAlertWrapper{
+	position: absolute;
+    width: 40%;
+    z-index: 99999999999;
+    left: 0;
+    opacity: .96;
+    right: 0;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    top: 5rem;
+    display: flex;
+    align-items: center;
+}

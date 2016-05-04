@@ -18,6 +18,15 @@
 	  		},
 	  		abstract: true
 	  	})
+	  	.state('app.sign_up', {
+	  		url: '/sign_up',
+	  		views: {
+	  			'module': {
+	  				templateUrl: 'modules/signUp/signUp.html',
+	  				controller: 'signUp'
+	  			}
+	  		}
+	  	})
 	  	.state('app.login', {
 	  		url: '/login',
 	  		views: {

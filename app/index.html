@@ -12,7 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="modules/login/login.css">
+  <link rel="stylesheet" href="modules/signUp/signUp.css">
+  <link rel="stylesheet" href="modules/common/directives/alert.css">
   <link rel="stylesheet" type="text/css" href="vendor/angular-bootstrap/ui-bootstrap-csp.css">
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <script src="vendor/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -21,10 +24,8 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <div class="container-fluid">
-    <div cs-header class="app-header" >
-
-    </div>
+  <div class="container-fluid" style="height:100vh;">
+    <div cs-header class="app-header"></div>
     <div ui-view="content"></div>
     <div class="app-footer">
 
@@ -54,6 +55,7 @@
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
   <script src="modules/header/header.js"></script>
-  <script src=""></script>
+  <script src="modules/signUp/signUp.js"></script>
+  <script src="modules/common/directives/alert.js"></script>
 </body>
 </html>

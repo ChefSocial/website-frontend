@@ -5,12 +5,21 @@
 		.service('UserService', ['$http', '$q', '$localStorage', function ($http, $q, $localStorage){
 			
 			var self = this;
-			this.login = function (){
+			
+			this.signUp = function (data){
 				var defer = $q.defer();
-				var data = {
-					'email': 'rox.rachit@gmail.com',
-					'password': 'password'
-				}
+				$http.post('http://localhost:3000/auth', data)
+				.success(function (data, status, headers){
+					defer.resolve(data);
+				})
+				.error(function (data){
+					defer.reject(data);
+				});
+				return defer.promise;
+			}
+
+			this.login = function (data){
+				var defer = $q.defer();
 				$http.post('http://localhost:3000/auth/sign_in', data)
 				.success(function (data, status, headers){
 					self.logged_in_user = data['data'];
@@ -25,15 +34,8 @@
 
 			this.logout = function (data){
 				var defer = $q.defer();
-				console.log("data posted to delete user is below...");
+				console.log("data posted to delete user session is below...");
 				console.log(data);
-				// $http.delete('http://localhost:3000/auth/sign_out', data)
-				// .success(function (data){
-				// 	defer.resolve(data);
-				// })
-				// .error(function (data){
-				// 	defer.reject(data);
-				// });
 				$http({
 					method: 'DELETE',
 					url: 'http://localhost:3000/auth/sign_out',

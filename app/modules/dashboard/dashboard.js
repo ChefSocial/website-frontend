@@ -2,7 +2,7 @@
 	'use strict'
 
 	angular.module('chefSocial')
-	.controller('dashboard', ['$scope', 'UserService', '$localStorage', '$state', function ($scope, UserService, $localStorage, $state){
+	.controller('dashboard', ['$rootScope', '$scope', 'UserService', '$localStorage', '$state', function ($rootScope, $scope, UserService, $localStorage, $state){
 
 		$scope.logout = function (){
 				UserService.logout($localStorage.logged_in_user.credentials)
@@ -10,10 +10,8 @@
 						function(data){
 							$scope.loggedInUserData = data;
 							console.log("Successfully logged out");
-							// Show an alert of successful logout
-							// transition to the dashboard state
 							$state.go('app.login');
-							// console.log(UserService);
+							$rootScope.$emit('showAlert', {'status':'success', 'message':'You have successfully logged out.'});
 						},
 						function(){
 							console.log('Something went wrong.');
