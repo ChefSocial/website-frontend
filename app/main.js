@@ -7,9 +7,12 @@
 	  'ngRoute',
 	  'ui.router',
 	  'ngStorage'
-	]).
-	config(['$routeProvider', '$stateProvider', function ($routeProvider, $stateProvider) {
-	  $stateProvider
+	])
+	.config(['$routeProvider', '$stateProvider', '$httpProvider', function ($routeProvider, $stateProvider, $httpProvider) {
+	  
+		$httpProvider.interceptors.push('httpInterceptor');
+
+	  	$stateProvider
 	  	.state('app', {
 	  		views: {
 	  			'content': {
