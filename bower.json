@@ -15,6 +15,7 @@
     "ui-router": "~0.2.18",
     "ngstorage": "~0.3.10",
     "bootstrap": "~3.3.6",
-    "ng-token-auth": "~0.0.29"
+    "ng-token-auth": "~0.0.29",
+    "angular-cookie": "~4.1.0"
   }
 }

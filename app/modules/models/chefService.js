@@ -9,7 +9,7 @@
 
 			this.fetchChefs = function(){
 				var defer = $q.defer();
-				$http.get('http://localhost:3000/chefs')
+				$http.get('http://localhost:3000/api/v1/chefs')
 					.success(function (data){
 						defer.resolve(data);
 					})
