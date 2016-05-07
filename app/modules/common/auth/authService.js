@@ -9,8 +9,8 @@
 			this.validateToken = function (data){
 				var defer = $q.defer();
 				$http({
-					method: 'DELETE',
-					url: 'http://localhost:3000/auth/sign_out',
+					method: 'GET',
+					url: 'http://localhost:3000/auth/validate_token',
 					headers: data
 				})
 				.success(function (data, status, headers){
