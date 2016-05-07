@@ -12,9 +12,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a ng-click="gotoLogin();">Login <span class="sr-only">(current)</span></a></li>
-        <li><a ng-click="gotosignUp();">Sign Up</a></li>
-        <li ng-if="user.signedIn"><a ng-click="gotosignUp();">Logout</a></li>
+        <li ng-if="!user.signedIn"><a ng-click="gotoLogin();">Login <span class="sr-only">(current)</span></a></li>
+        <li ng-if="!user.signedIn"><a ng-click="gotosignUp();">Sign Up</a></li>
+        <li ng-if="user.signedIn"><a ng-click="logout();">Logout</a></li>
       </ul>
     </div>
   </nav>

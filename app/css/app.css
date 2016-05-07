@@ -19,6 +19,14 @@ input:-webkit-autofill {
     color: white !important;
     outline: 0 !important; }
 
+.chef-box {
+  padding: 3rem;
+  border: 1px solid #E4E4E4;
+  box-shadow: 1px 1px 5px 1px #f1f1f1;
+  margin-bottom: 2rem; }
+  .chef-box:hover {
+    cursor: pointer; }
+
 .loginWrapper {
   /*height: 100vh;*/
   /*background-color: red;*/

@@ -1,15 +1,10 @@
 <div class="row">
-	<div class="col-md-8 col-md-offset-2">
-		<div class="">
-			<button class="btn csButton" ng-click="logout();">Logout</button>
-		</div>
-	</div>
-</div>
-
-<div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<div ng-repeat="chef in chefs">
-			
+		<div ng-repeat="chef in chefs" class="row chef-box">
+			<div class="col-md-6 col-md-offset-3">{{ chef.name }}</div>
+			<div class="col-md-6 col-md-offset-3">{{ chef.email }}</div>
+			<div class="col-md-6 col-md-offset-3">{{ chef.rating }}</div>
+			<div class="col-md-6 col-md-offset-3">{{ chef.address }}</div>
 		</div>
 	</div>
 </div>
